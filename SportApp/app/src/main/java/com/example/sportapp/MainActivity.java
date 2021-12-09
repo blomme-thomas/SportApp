@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (!Patterns.EMAIL_ADDRESS.matcher(emailText).matches()){
             email.setError("Entrez un email valide");
             email.requestFocus();
+            return;
         }
 
         if (passwordText.isEmpty()){
