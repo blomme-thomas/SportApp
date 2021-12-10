@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         signIn = (Button) findViewById(R.id.loginbutton);
         signIn.setOnClickListener(this);
 
-        email = (EditText) findViewById(R.id.email);
+        email = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
@@ -100,8 +100,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (task.isSuccessful()){
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-                    startActivity(new Intent(MainActivity.this, HomeActivity.class));
-
+                    if (user.isEmailVerified()){
+                        startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                    }else{
+                        user.sendEmailVerification();
+                        Toast.makeText(MainActivity.this, "Checkez votre adresse mail pour vérifier votre compte", Toast.LENGTH_LONG).show();
+                    }
 
                 }else{
                     Toast.makeText(MainActivity.this, "Authentification échouée", Toast.LENGTH_LONG).show();
