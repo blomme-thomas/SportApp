@@ -31,6 +31,7 @@ public class HomeActivity extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
+    private User userProfile;
 
     private String username, age, email;
 
@@ -61,10 +62,12 @@ public class HomeActivity extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
+
+
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User userProfile = snapshot.getValue(User.class);
+                userProfile = snapshot.getValue(User.class);
 
                 if (userProfile != null){
                     username = userProfile.username;
@@ -97,7 +100,7 @@ public class HomeActivity extends AppCompatActivity {
                             selectedFragment = new FragmentMessagerie();
                             break;
                         case R.id.ic_profil:
-                            selectedFragment = new FragmentProfil();
+                            selectedFragment = new FragmentProfil(userProfile);
                             break;
                         case R.id.ic_home:
                             selectedFragment = new FragmentHome();
