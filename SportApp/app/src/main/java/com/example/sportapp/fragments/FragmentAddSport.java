@@ -66,8 +66,10 @@ public class FragmentAddSport extends Fragment {
 
                 sports = userProfile.sports;
                 sports.add(sportText);
+                userProfile.sports.add(sportText);
                 levels = userProfile.levels;
                 levels.add(levelText);
+                userProfile.levels.add(levelText);
 
                 reference.child(userID).child("sports").setValue(sports);
                 reference.child(userID).child("levels").setValue(levels);
