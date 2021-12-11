@@ -32,8 +32,8 @@ public class FragmentProfil extends Fragment {
     private ListView sports;
     private Button addSport;
 
-    private ArrayList<String> sportItems = new ArrayList<>();
-    private ArrayList<String> levelItems = new ArrayList<>();
+    private ArrayList<String> sportItems = new ArrayList<String>();
+    private ArrayList<String> levelItems = new ArrayList<String>();
     private ArrayList<String> sportLevelItems;
 
 
@@ -72,16 +72,18 @@ public class FragmentProfil extends Fragment {
             for (int i = 0; i < sportItems.size(); i++){
                 sportLevelItems.add(sportItems.get(i)+"    "+levelItems.get(i)+"/10");
             }
+
+            adapter = new ArrayAdapter<String>(
+                    getActivity(),
+                    android.R.layout.simple_list_item_1,
+                    sportLevelItems
+            );
+
+            sports.setAdapter(adapter);
         }
 
 
-        adapter = new ArrayAdapter<String>(
-                getActivity(),
-                android.R.layout.simple_list_item_1,
-                sportLevelItems
-        );
 
-        sports.setAdapter(adapter);
 
         addSport.setOnClickListener(new View.OnClickListener() {
             @Override

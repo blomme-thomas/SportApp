@@ -13,7 +13,7 @@ public class User {
         this.username = username;
         this.age = age;
         this.email = email;
-        this.sports = new ArrayList<>();
-        this.levels = new ArrayList<>();
+        this.sports = new ArrayList<String>();
+        this.levels = new ArrayList<String>();
     }
 }
