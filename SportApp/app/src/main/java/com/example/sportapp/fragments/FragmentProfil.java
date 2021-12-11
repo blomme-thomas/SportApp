@@ -32,8 +32,8 @@ public class FragmentProfil extends Fragment {
     private ListView sports;
     private Button addSport;
 
-    private ArrayList<String> sportItems;
-    private ArrayList<String> levelItems;
+    private ArrayList<String> sportItems = new ArrayList<>();
+    private ArrayList<String> levelItems = new ArrayList<>();
     private ArrayList<String> sportLevelItems;
 
 
@@ -61,8 +61,6 @@ public class FragmentProfil extends Fragment {
         age = (TextView) view.findViewById(R.id.age);
         sports = (ListView) view.findViewById(R.id.sports);
         addSport = (Button) view.findViewById(R.id.addSport);
-
-
 
         username.setText(userProfile.username);
         age.setText(userProfile.age+"ans");
