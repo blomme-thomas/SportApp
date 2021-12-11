@@ -68,9 +68,12 @@ public class FragmentProfil extends Fragment {
         sportItems = userProfile.sports;
         levelItems = userProfile.levels;
 
-        for (int i = 0; i < sportItems.size(); i++){
-            sportLevelItems.add(sportItems.get(i)+"    "+levelItems.get(i)+"/10");
+        if (sportItems != null){
+            for (int i = 0; i < sportItems.size(); i++){
+                sportLevelItems.add(sportItems.get(i)+"    "+levelItems.get(i)+"/10");
+            }
         }
+
 
         adapter = new ArrayAdapter<String>(
                 getActivity(),
