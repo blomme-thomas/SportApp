@@ -67,7 +67,6 @@ public class ForgotPassword extends AppCompatActivity {
                     Toast.makeText(ForgotPassword.this, "Checkez votre adresse mail pour réinitialiser le mot de passe", Toast.LENGTH_LONG).show();
                 }else{
                     Toast.makeText(ForgotPassword.this, "Un probléme est apparu", Toast.LENGTH_LONG).show();
-
                 }
             }
         });

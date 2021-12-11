@@ -9,11 +9,11 @@ public class User {
 
     public User(){}
 
-    public User(String username, String age, String email) {
+    public User(String username, String age, String email, ArrayList<String> sports, ArrayList<String> levels) {
         this.username = username;
         this.age = age;
         this.email = email;
-        this.sports = new ArrayList<String>();
-        this.levels = new ArrayList<String>();
+        this.sports = sports;
+        this.levels = levels;
     }
 }

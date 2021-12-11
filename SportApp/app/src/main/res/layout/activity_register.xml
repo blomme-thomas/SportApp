@@ -86,12 +86,48 @@
         android:padding="15dp"
         android:drawablePadding="20dp"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:id="@+id/sportlevel"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sport"
+            android:background="#30ffffff"
+            android:hint="Sport"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:drawableLeft="@drawable/ic_baseline_sports_24"
+            android:drawablePadding="20dp"/>
+
+        <EditText
+            android:id="@+id/level"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#30ffffff"
+            android:drawableLeft="@drawable/ic_baseline_sports_24"
+            android:drawablePadding="20dp"
+            android:hint="Niveau/10"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+    </LinearLayout>
+
+
 
     <Button
         android:id="@+id/registerbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/password"
+        android:layout_below="@id/sportlevel"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/teal_700"

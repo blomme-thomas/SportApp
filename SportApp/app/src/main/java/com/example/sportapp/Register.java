@@ -18,11 +18,12 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 public class Register extends AppCompatActivity implements View.OnClickListener{
 
-    private EditText username, age, email, password;
+    private EditText username, age, email, password, sport, level;
     private ProgressBar progressBar;
     private Button registerUser, back;
     private FirebaseAuth mAuth;
@@ -38,6 +39,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
         age = (EditText) findViewById(R.id.age);
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
+        sport = (EditText) findViewById(R.id.sport);
+        level = (EditText) findViewById(R.id.level);
         registerUser = (Button) findViewById(R.id.registerbutton);
         registerUser.setOnClickListener(this);
         back = (Button) findViewById(R.id.back);
@@ -62,6 +65,11 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
         String ageText = age.getText().toString().trim();
         String emailText = email.getText().toString().trim();
         String passwordText = password.getText().toString().trim();
+        String sportText = password.getText().toString().trim();
+        String levelText = password.getText().toString().trim();
+
+        ArrayList<String> sports = new ArrayList<>();
+        ArrayList<String> levels = new ArrayList<>();
 
         if (usernameText.isEmpty()){
             username.setError("Entrez un nom");
@@ -98,13 +106,28 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
             return;
         }
 
+        if (sportText.isEmpty()){
+            sport.setError("Entrez un sport");
+            sport.requestFocus();
+            return;
+        }
+
+        if (levelText.isEmpty()){
+            level.setError("Entrez un niveau pour votre sport");
+            level.requestFocus();
+            return;
+        }
+
+        sports.add(sportText);
+        levels.add(levelText);
+
         progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(emailText, passwordText)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            User user = new User(usernameText, ageText, emailText);
+                            User user = new User(usernameText, ageText, emailText, sports, levels);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
