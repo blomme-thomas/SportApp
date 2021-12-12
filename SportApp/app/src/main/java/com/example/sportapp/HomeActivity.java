@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.sportapp.fragments.FragmentActivite;
 import com.example.sportapp.fragments.FragmentEquipe;
@@ -24,6 +27,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
+
 public class HomeActivity extends AppCompatActivity {
 
     private Button logout;
@@ -34,6 +41,13 @@ public class HomeActivity extends AppCompatActivity {
     private User userProfile;
 
     private String username, age, email;
+    private ArrayList<String> sportItems;
+    private ArrayList<String> levelItems;
+
+    private TextView name;
+    private TextView ageUser;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +63,8 @@ public class HomeActivity extends AppCompatActivity {
                     new FragmentHome()).commit();
         }
 
+        name = (TextView) findViewById(R.id.username);
+        ageUser = (TextView) findViewById(R.id.age);
         logout = (Button) findViewById(R.id.logoutbutton);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,8 +78,6 @@ public class HomeActivity extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
-
-
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -73,6 +87,8 @@ public class HomeActivity extends AppCompatActivity {
                     username = userProfile.username;
                     age = userProfile.age;
                     email = userProfile.email;
+                    sportItems = userProfile.sports;
+                    levelItems = userProfile.levels;
                 }
             }
 
@@ -81,6 +97,12 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+
+
+
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =

@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:id="@+id/sportsLayout">
 
 
@@ -21,6 +21,7 @@
             android:id="@+id/username"
             android:textColor="@color/white"
             android:textSize="35dp"
+            android:text=""
             android:gravity="center"
             android:textStyle="bold"/>
 
@@ -46,6 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/sportsLayout"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
         android:text="Ajouter un sport" />
 
 

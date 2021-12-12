@@ -31,7 +31,6 @@ public class FragmentAddSport extends Fragment {
     private String userID;
 
     private EditText sport,level;
-    private ArrayList<String> sports,levels;
 
     public FragmentAddSport(User user_) {
         this.userProfile = user_;
@@ -64,15 +63,23 @@ public class FragmentAddSport extends Fragment {
                 String sportText = sport.getText().toString().trim();
                 String levelText = level.getText().toString().trim();
 
-                sports = userProfile.sports;
-                sports.add(sportText);
+                if (sportText.isEmpty()){
+                    sport.setError("Entrez un sport");
+                    sport.requestFocus();
+                    return;
+                }
+
+                if (levelText.isEmpty()){
+                    level.setError("Entrez un niveau");
+                    level.requestFocus();
+                    return;
+                }
+
                 userProfile.sports.add(sportText);
-                levels = userProfile.levels;
-                levels.add(levelText);
                 userProfile.levels.add(levelText);
 
-                reference.child(userID).child("sports").setValue(sports);
-                reference.child(userID).child("levels").setValue(levels);
+                reference.child(userID).child("sports").setValue(userProfile.sports);
+                reference.child(userID).child("levels").setValue(userProfile.levels);
 
                 FragmentManager frman = getFragmentManager();
                 FragmentTransaction ftran = frman.beginTransaction();

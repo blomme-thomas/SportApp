@@ -65,8 +65,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
         String ageText = age.getText().toString().trim();
         String emailText = email.getText().toString().trim();
         String passwordText = password.getText().toString().trim();
-        String sportText = password.getText().toString().trim();
-        String levelText = password.getText().toString().trim();
+        String sportText = sport.getText().toString().trim();
+        String levelText = level.getText().toString().trim();
 
         ArrayList<String> sports = new ArrayList<>();
         ArrayList<String> levels = new ArrayList<>();
