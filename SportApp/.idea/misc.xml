@@ -4,14 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/activity_forgot_password.xml" value="0.25" />
-        <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/activity_home.xml" value="0.4" />
+        <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/activity_register.xml" value="0.25" />
-        <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/fragment_activite.xml" value="0.25" />
-        <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/fragment_add_sport.xml" value="0.25" />
-        <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/fragment_home.xml" value="0.10989583333333333" />
-        <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/fragment_messagerie.xml" value="0.1" />
-        <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/fragment_profil.xml" value="0.1" />
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/menu/nav_menu.xml" value="0.25" />
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/app/src/main/res/drawable-v24/ic_baseline_alternate_email_24.xml" value="0.23425925925925925" />
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/app/src/main/res/drawable-v24/ic_baseline_person_24.xml" value="0.23425925925925925" />
@@ -25,6 +19,27 @@
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/app/src/main/res/layout/fragment_equipe.xml" value="0.25" />
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/app/src/main/res/menu/nav_menu.xml" value="0.25" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/drawable-v24/ic_btn.xml" value="0.13796296296296295" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/drawable-v24/ic_field.xml" value="0.14583333333333334" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/activite_rv_item.xml" value="0.1" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/activity_actvtest.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/activity_actvvis.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/activity_add_actv.xml" value="0.2" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/activity_ajouter_activite.xml" value="0.2" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/activity_detail_actv.xml" value="0.264" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/activity_edit_activite.xml" value="0.1" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/activity_edit_actv.xml" value="0.2" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/activity_home.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/actv_content.xml" value="0.2" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.1" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/fragment_activite.xml" value="0.1" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/fragment_add_sport.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/fragment_equipe.xml" value="0.1" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/fragment_home.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/fragment_messagerie.xml" value="0.1" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/layout/fragment_profil.xml" value="0.1" />
+        <entry key="..\:/Users/romai/AndroidStudioProjects/SportAp/SportApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14635416666666667" />
       </map>
     </option>
   </component>

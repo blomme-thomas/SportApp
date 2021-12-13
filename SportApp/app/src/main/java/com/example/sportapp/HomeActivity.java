@@ -39,7 +39,7 @@ public class HomeActivity extends AppCompatActivity {
     private DatabaseReference reference;
     private String userID;
     private User userProfile;
-
+    private Actv actv;
     private String username, age, email;
     private ArrayList<String> sportItems;
     private ArrayList<String> levelItems;
@@ -113,7 +113,8 @@ public class HomeActivity extends AppCompatActivity {
 
                     switch (item.getItemId()) {
                         case R.id.ic_activite:
-                            selectedFragment = new FragmentActivite();
+                            Intent intent = new Intent(HomeActivity.this, Actvvis.class);
+                            startActivity(intent);
                             break;
                         case R.id.ic_team:
                             selectedFragment = new FragmentEquipe();
