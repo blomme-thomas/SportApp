@@ -52,11 +52,11 @@
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Edition Activité"
+                    android:text="Edition Equipe"
                     android:textColor="@color/white"
                     android:textSize="32sp" />
             </LinearLayout>
@@ -91,7 +91,7 @@
                         android:layout_marginEnd="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="8dp"
-                        android:text="Sport"
+                        android:text="Nom équipe"
                         android:textSize="16sp" />
 
                     <EditText
@@ -128,8 +128,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginRight="20dp"
-                        android:layout_toStartOf="@+id/urlEditText"
-                        android:layout_toLeftOf="@+id/urlEditText"
+
                         android:background="@drawable/ic_field"
                         android:ems="3"
 
@@ -152,7 +151,7 @@
                         android:layout_marginEnd="20dp"
                         android:layout_marginRight="20dp"
 
-                        android:text="Lieu"
+                        android:text="Niveau"
                         android:textSize="16sp" />
 
 
@@ -203,7 +202,7 @@
                         android:textSize="16sp" />
 
                     <Button
-                        android:id="@+id/ActvButton"
+                        android:id="@+id/EquipeButton"
                         android:layout_width="240dp"
                         android:layout_height="56dp"
                         android:layout_below="@+id/descriptionEditText"

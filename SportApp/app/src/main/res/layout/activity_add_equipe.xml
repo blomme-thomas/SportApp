@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@color/white"
     android:layout_height="match_parent">
@@ -56,7 +55,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Edition Activité"
+                    android:text="Ajouter Equipe"
                     android:textColor="@color/white"
                     android:textSize="32sp" />
             </LinearLayout>
@@ -91,7 +90,7 @@
                         android:layout_marginEnd="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="8dp"
-                        android:text="Sport"
+                        android:text="Nom équipe"
                         android:textSize="16sp" />
 
                     <EditText
@@ -107,9 +106,9 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginRight="20dp"
                         android:autofillHints="@string/app_name"
-                        android:background="@drawable/ic_field"
-                        android:ems="80"
 
+                        android:ems="80"
+                        android:hint=""
                         android:inputType="textAutoComplete"
                         android:paddingLeft="20dp"
                         android:paddingTop="8dp"
@@ -128,8 +127,6 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginRight="20dp"
-                        android:layout_toStartOf="@+id/urlEditText"
-                        android:layout_toLeftOf="@+id/urlEditText"
                         android:background="@drawable/ic_field"
                         android:ems="3"
 
@@ -151,11 +148,8 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginRight="20dp"
-
-                        android:text="Lieu"
+                        android:text="Niveau"
                         android:textSize="16sp" />
-
-
 
 
                     <EditText
@@ -172,10 +166,10 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginRight="20dp"
+
                         android:background="@drawable/ic_field"
                         android:ems="255"
                         android:gravity="clip_vertical"
-
                         android:inputType="textMultiLine"
                         android:lines="8"
                         android:maxLines="16"
@@ -203,7 +197,7 @@
                         android:textSize="16sp" />
 
                     <Button
-                        android:id="@+id/ActvButton"
+                        android:id="@+id/EquipeButton"
                         android:layout_width="240dp"
                         android:layout_height="56dp"
                         android:layout_below="@+id/descriptionEditText"

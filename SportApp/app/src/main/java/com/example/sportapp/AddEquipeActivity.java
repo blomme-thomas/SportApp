@@ -1,5 +1,6 @@
 package com.example.sportapp;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -13,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class AddActv extends AppCompatActivity {
+public class AddEquipeActivity extends AppCompatActivity {
 
     @BindView(R.id.nameEditText)
     EditText mNameEditText;
@@ -25,29 +26,29 @@ public class AddActv extends AppCompatActivity {
     @BindView(R.id.descriptionEditText)
     EditText mDescriptionEditText;
 
-    @BindView(R.id.ActvButton)
-    Button actvButton;
+    @BindView(R.id.EquipeButton)
+    Button equipeButton;
 
     private DatabaseReference mDatabaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_actv);
+        setContentView(R.layout.activity_add_equipe);
 
         ButterKnife.bind(this);
 
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference("Activite");
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference("Equipe");
 
-        actvButton.setOnClickListener(v -> {
-            String sport = mNameEditText.getText().toString();
-            String lieu = mAnimeEditText.getText().toString();
+        equipeButton.setOnClickListener(v -> {
+            String nom = mNameEditText.getText().toString();
+            String niveau = mAnimeEditText.getText().toString();
             String description = mDescriptionEditText.getText().toString();
 
-            Actv actv = new Actv(sport, lieu, description);
+            Equipe equipe = new Equipe(nom, niveau, description);
             String id = mDatabaseReference.push().getKey();
-            if (id != null) { mDatabaseReference.child(id).setValue(actv); }
+            if (id != null) { mDatabaseReference.child(id).setValue(equipe); }
 
-            Intent intent=new Intent(this, Actvvis.class);
+            Intent intent=new Intent(this, EquipeActivity.class);
             startActivity(intent);
         });
 

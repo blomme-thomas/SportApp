@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".DetailActv">
+    tools:context=".DetailEquipeActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
@@ -49,7 +49,7 @@
         app:layout_constraintBottom_toTopOf="@+id/descriptionTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
- />
+        />
 
     <TextView
         android:id="@+id/descriptionTextView"

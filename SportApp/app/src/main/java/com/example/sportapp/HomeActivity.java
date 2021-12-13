@@ -43,7 +43,7 @@ public class HomeActivity extends AppCompatActivity {
     private String username, age, email;
     private ArrayList<String> sportItems;
     private ArrayList<String> levelItems;
-
+    private Intent intent;
     private TextView name;
     private TextView ageUser;
 
@@ -113,11 +113,12 @@ public class HomeActivity extends AppCompatActivity {
 
                     switch (item.getItemId()) {
                         case R.id.ic_activite:
-                            Intent intent = new Intent(HomeActivity.this, Actvvis.class);
+                             intent = new Intent(HomeActivity.this, Actvvis.class);
                             startActivity(intent);
                             break;
                         case R.id.ic_team:
-                            selectedFragment = new FragmentEquipe();
+                              intent = new Intent(HomeActivity.this, EquipeActivity.class);
+                            startActivity(intent);
                             break;
                         case R.id.ic_messagerie:
                             selectedFragment = new FragmentMessagerie();

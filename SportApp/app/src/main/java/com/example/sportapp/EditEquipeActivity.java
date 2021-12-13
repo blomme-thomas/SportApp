@@ -17,7 +17,7 @@ import java.util.Objects;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class EditActv extends AppCompatActivity {
+public class EditEquipeActivity extends AppCompatActivity {
 
     @BindView(R.id.nameEditText)
     EditText mNameEditText;
@@ -29,8 +29,8 @@ public class EditActv extends AppCompatActivity {
     @BindView(R.id.descriptionEditText)
     EditText mDescriptionEditText;
 
-    @BindView(R.id.ActvButton)
-    Button mCharacterButton;
+    @BindView(R.id.EquipeButton)
+    Button equipeButton;
 
     private DatabaseReference mDatabaseReference;
 
@@ -41,24 +41,24 @@ public class EditActv extends AppCompatActivity {
         ButterKnife.bind(this);
         String mKey= Objects.requireNonNull(getIntent().getExtras()).getString("key");
 
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference("Activite").child(mKey);
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference("Equipe").child(mKey);
 
         mDatabaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                Actv actv = dataSnapshot.getValue(Actv.class);
+                Equipe equipe = dataSnapshot.getValue(Equipe.class);
 
-                if (actv.getSport() != null) {
-                    mNameEditText.setText(actv.getSport());
+                if (equipe.getNom() != null) {
+                    mNameEditText.setText(equipe.getNom());
                 }
 
-                if (actv.getLieu()!= null) {
-                    mAnimeEditText.setText(actv.getLieu());
+                if (equipe.getNiveau()!= null) {
+                    mAnimeEditText.setText(equipe.getNiveau());
                 }
 
-                if (actv.getDescription() != null) {
-                    mDescriptionEditText.setText(actv.getDescription());
+                if (equipe.getDescription() != null) {
+                    mDescriptionEditText.setText(equipe.getDescription());
                 }
 
 
@@ -67,13 +67,13 @@ public class EditActv extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError error) {
-                Toast.makeText(EditActv.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(EditEquipeActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
-        mCharacterButton.setOnClickListener(v -> {
-            mDatabaseReference.child("sport").setValue(mNameEditText.getText().toString());
-            mDatabaseReference.child("lieu").setValue(mAnimeEditText.getText().toString());
+        equipeButton.setOnClickListener(v -> {
+            mDatabaseReference.child("Nom").setValue(mNameEditText.getText().toString());
+            mDatabaseReference.child("Niveau").setValue(mAnimeEditText.getText().toString());
             mDatabaseReference.child("description").setValue(mDescriptionEditText.getText().toString());
 
             finish();
