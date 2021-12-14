@@ -64,7 +64,6 @@ public class ActvAdaptater extends RecyclerView.Adapter<ViewHolder>{
     public class ViewHolder extends com.example.sportapp.ViewHolder {
 
 
-
         @BindView(R.id.nameTextView)
         TextView mNameTextView;
 

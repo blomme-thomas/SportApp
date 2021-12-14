@@ -113,12 +113,10 @@ public class HomeActivity extends AppCompatActivity {
 
                     switch (item.getItemId()) {
                         case R.id.ic_activite:
-                             intent = new Intent(HomeActivity.this, Actvvis.class);
-                            startActivity(intent);
+                            selectedFragment = new FragmentActivite();
                             break;
                         case R.id.ic_team:
-                              intent = new Intent(HomeActivity.this, EquipeActivity.class);
-                            startActivity(intent);
+                            selectedFragment = new FragmentEquipe();
                             break;
                         case R.id.ic_messagerie:
                             selectedFragment = new FragmentMessagerie();
