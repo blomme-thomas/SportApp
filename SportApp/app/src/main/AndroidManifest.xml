@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SportApp">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBlNeSV9plEsCtpcmfZp9OdCt__K7O-2Ws"/>
         <activity
             android:name=".DetailEquipeActivity"
             android:exported="true" />
