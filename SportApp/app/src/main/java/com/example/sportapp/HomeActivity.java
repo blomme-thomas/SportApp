@@ -39,11 +39,11 @@ public class HomeActivity extends AppCompatActivity {
     private DatabaseReference reference;
     private String userID;
     private User userProfile;
-
+    private Actv actv;
     private String username, age, email;
     private ArrayList<String> sportItems;
     private ArrayList<String> levelItems;
-
+    private Intent intent;
     private TextView name;
     private TextView ageUser;
 

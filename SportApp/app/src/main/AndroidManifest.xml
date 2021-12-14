@@ -10,6 +10,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SportApp">
         <activity
+            android:name=".DetailEquipeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EditEquipeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AddEquipeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EquipeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Actvvis"
+            android:exported="true" />
+        <activity
+            android:name=".EditActv"
+            android:exported="true" />
+        <activity
+            android:name=".DetailActv"
+            android:exported="true" />
+        <activity
+            android:name=".AddActv"
+            android:exported="true" />
+        <activity
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity

@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.FragmentActivite">
-
-
+    android:background="@color/white"
+    tools:context=".EquipeActivity">
 
     <RelativeLayout
         android:id="@+id/linearLayout"
@@ -29,8 +28,8 @@
             android:layout_marginRight="16dp"
             android:layout_toStartOf="@+id/imageView"
             android:layout_toLeftOf="@+id/imageView"
-            android:text="Liste des activités"
             android:fontFamily="sans-serif"
+            android:text="Liste des équipes"
             android:textColor="@color/black"
             android:textSize="24sp" />
 
@@ -62,7 +61,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.0"
-        tools:context=".fragments.FragmentActivite"
+        tools:context=".EquipeActivity"
         tools:listitem=""
         />
 
@@ -76,9 +75,5 @@
         app:layout_constraintEnd_toEndOf="@+id/characterRecyclerView"
         app:srcCompat="@drawable/ic_plus"
         tools:ignore="VectorDrawableCompat" />
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
