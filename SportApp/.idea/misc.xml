@@ -4,16 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/activity_actvvis.xml" value="0.22282608695652173" />
-        <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/activity_detail_actv.xml" value="0.12760416666666666" />
-        <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/activity_equipe.xml" value="0.12760416666666666" />
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/activity_forgot_password.xml" value="0.25" />
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/activity_home.xml" value="0.4" />
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/activity_register.xml" value="0.25" />
-        <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/fragment_activite.xml" value="0.1" />
+        <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/fragment_activite.xml" value="0.25" />
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/fragment_add_contact.xml" value="0.22282608695652173" />
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/fragment_add_sport.xml" value="0.25" />
-        <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/fragment_equipe.xml" value="0.1" />
+        <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/fragment_equipe.xml" value="0.22282608695652173" />
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/fragment_home.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/fragment_messagerie.xml" value="0.1" />
         <entry key="..\:/Users/blomm/Documents/UQAC/PlateformeMobile/SportApp/SportApp/app/src/main/res/layout/fragment_profil.xml" value="0.1" />
