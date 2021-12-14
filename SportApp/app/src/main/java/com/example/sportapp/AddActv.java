@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.sportapp.fragments.FragmentActivite;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -47,8 +48,8 @@ public class AddActv extends AppCompatActivity {
             String id = mDatabaseReference.push().getKey();
             if (id != null) { mDatabaseReference.child(id).setValue(actv); }
 
-            Intent intent=new Intent(this, Actvvis.class);
-            startActivity(intent);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fl_wrapper,
+                    new FragmentActivite()).commit();
         });
 
     }

@@ -1,6 +1,5 @@
 package com.example.sportapp.fragments;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -16,7 +15,6 @@ import android.widget.Toast;
 
 import com.example.sportapp.Actv;
 import com.example.sportapp.ActvAdaptater;
-import com.example.sportapp.Actvvis;
 import com.example.sportapp.AddActv;
 import com.example.sportapp.R;
 import com.example.sportapp.User;
@@ -29,7 +27,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class FragmentActivite extends Fragment {

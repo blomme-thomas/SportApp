@@ -1,57 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.FragmentEquipe"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".fragments.FragmentEquipe">
 
-    <LinearLayout
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="50dp"
-        android:id="@+id/sportsLayout">
-
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/username"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toStartOf="@+id/imageView"
+            android:layout_toLeftOf="@+id/imageView"
+            android:fontFamily="sans-serif"
+            android:text="Liste des équipes"
             android:textColor="@color/white"
             android:textSize="35dp"
-            android:text=""
-            android:gravity="center"
             android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/age"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:textColor="@color/white"/>
 
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sports"/>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:contentDescription=""
+            app:srcCompat="@drawable/ic_menu"
+            tools:ignore="VectorDrawableCompat" />
+    </RelativeLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/characterRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context=".EquipeActivity"
+        tools:listitem=""
+        />
 
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/addSport"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/newFloatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/sportsLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="Ajouter un sport" />
+        android:layout_margin="20dp"
+        android:contentDescription=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/characterRecyclerView"
+        app:srcCompat="@drawable/ic_plus"
+        tools:ignore="VectorDrawableCompat" />
 
-
-
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

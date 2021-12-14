@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.sportapp.fragments.FragmentActivite;
+import com.example.sportapp.fragments.FragmentEquipe;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -48,8 +50,8 @@ public class AddEquipeActivity extends AppCompatActivity {
             String id = mDatabaseReference.push().getKey();
             if (id != null) { mDatabaseReference.child(id).setValue(equipe); }
 
-            Intent intent=new Intent(this, EquipeActivity.class);
-            startActivity(intent);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fl_wrapper,
+                    new FragmentEquipe()).commit();
         });
 
     }

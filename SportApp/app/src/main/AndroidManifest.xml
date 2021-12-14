@@ -19,12 +19,6 @@
             android:name=".AddEquipeActivity"
             android:exported="true" />
         <activity
-            android:name=".EquipeActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Actvvis"
-            android:exported="true" />
-        <activity
             android:name=".EditActv"
             android:exported="true" />
         <activity
