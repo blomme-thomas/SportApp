@@ -7,7 +7,22 @@
     android:background="@drawable/background">
 
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/envoyermessage"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:text="Envoyer un message"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"/>
 
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/envoyermessage"
+        android:id="@+id/contact"/>
 
 
 </RelativeLayout>

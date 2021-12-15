@@ -118,7 +118,7 @@ public class HomeActivity extends AppCompatActivity {
                             selectedFragment = new FragmentEquipe();
                             break;
                         case R.id.ic_messagerie:
-                            selectedFragment = new FragmentMessagerie();
+                            selectedFragment = new FragmentMessagerie(userProfile);
                             break;
                         case R.id.ic_profil:
                             selectedFragment = new FragmentProfil(userProfile);

@@ -13,6 +13,10 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.sportapp.R;
+import com.example.sportapp.User;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -22,8 +26,15 @@ public class FragmentMessagerie extends Fragment {
 
     private ListView conversations;
     private Button send;
-    public FragmentMessagerie() {
-        // Required empty public constructor
+
+    private FirebaseUser user;
+    private DatabaseReference reference;
+    private String userID;
+
+    private User userProfile;
+
+    public FragmentMessagerie(User user_) {
+        this.userProfile = user_;
     }
 
 
@@ -40,6 +51,8 @@ public class FragmentMessagerie extends Fragment {
 
         conversations = (ListView) view.findViewById(R.id.conversations);
         send = (Button) view.findViewById(R.id.newContact);
+
+        reference = FirebaseDatabase.getInstance().getReference("Users");
 
         send.setOnClickListener(new View.OnClickListener() {
             @Override

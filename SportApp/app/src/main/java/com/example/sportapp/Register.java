@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
@@ -27,6 +29,10 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
     private ProgressBar progressBar;
     private Button registerUser, back;
     private FirebaseAuth mAuth;
+
+    private FirebaseUser user;
+    private DatabaseReference reference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +52,9 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
         back = (Button) findViewById(R.id.back);
         back.setOnClickListener(this);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        reference = FirebaseDatabase.getInstance().getReference("Users");
     }
 
     @Override
@@ -67,6 +76,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
         String passwordText = password.getText().toString().trim();
         String sportText = sport.getText().toString().trim();
         String levelText = level.getText().toString().trim();
+        String userID = user.getUid();
 
         ArrayList<String> sports = new ArrayList<>();
         ArrayList<String> levels = new ArrayList<>();
@@ -127,7 +137,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            User user = new User(usernameText, ageText, emailText, sports, levels);
+                            User user = new User(usernameText, ageText, emailText, userID, sports, levels);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
